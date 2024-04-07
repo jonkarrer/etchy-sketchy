@@ -8,9 +8,16 @@
   </head>
   <body>
     <aside class="Toolbar">
-      <h1 id="color-picker">C</h1>
-      <h1 id="size-picker">S</h1>
-      <h1 id="erase-picker">E</h1>
+      <input type="color" class="ColorPicker" id="color-picker" />
+      <input
+        type="number"
+        class="SizeInput"
+        id="size-input"
+        value="16"
+        min="6"
+        max="1000"
+      />
+      <h1 id="erase-button">E</h1>
     </aside>
     <main class="Canvas" id="canvas"></main>
     <script src="index.js"></script>

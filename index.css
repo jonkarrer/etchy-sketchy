@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --grid-size: 16;
+}
+
 body {
   display: flex;
 
@@ -12,14 +16,16 @@ body {
 }
 
 .Toolbar {
-  width: 80px;
-  background-color: #21264d;
+  position: relative;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 24px;
+
+  width: 80px;
+  background-color: #21264d;
 }
 
 .Toolbar h1 {
@@ -38,8 +44,8 @@ body {
 
 .Canvas {
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  grid-template-rows: repeat(var(--grid-size), 1fr);
 
   height: 100%;
   width: 100%;
@@ -52,4 +58,34 @@ body {
 
   width: 100%;
   height: 100%;
+}
+
+.ColorPicker {
+  height: 3rem;
+}
+
+.SizeInput {
+  display: block;
+  outline: none;
+
+  width: 70%;
+  height: 3rem;
+
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.SizeInput::-webkit-inner-spin-button,
+.SizeInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.SizeInput {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.show {
+  display: block;
 }
