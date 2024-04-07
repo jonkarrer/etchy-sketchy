@@ -23,8 +23,9 @@ customElements.define("grid-box", GridBox);
  * @param {number} height
  * @param {HTMLElement} parentEl
  */
-function makeGrid(width, height, parentEl) {
+function makeGrid(width, height) {
   let area = width * height;
+  let parentEl = document.getElementById("canvas");
 
   for (let i = 0; i < area; i++) {
     let gridBox = document.createElement("grid-box");
@@ -32,3 +33,5 @@ function makeGrid(width, height, parentEl) {
     parentEl.append(gridBox);
   }
 }
+
+makeGrid(16, 16);
