@@ -10,7 +10,6 @@ class GridBox extends HTMLElement {
   }
 
   hoverEffect() {
-    console.log("hovered", this.wasHoveredCount);
     this.wasHoveredCount++;
     this.style.opacity = this.wasHoveredCount * 0.1;
   }
