@@ -6,6 +6,7 @@
 
 :root {
   --grid-size: 16;
+  --grid-color: #000;
 }
 
 body {
@@ -52,7 +53,7 @@ body {
 }
 
 .GridBox {
-  background-color: #000;
+  background-color: var(--grid-color);
   opacity: 0;
   border: 1px lightslategray solid;
 

@@ -64,6 +64,18 @@ function changeGridSize(e) {
   makeGrid(size, size);
 }
 
+/**
+ * Change fill color of the boxes
+ * @param {HTMLInputElement} e
+ */
+function changeFillColor(e) {
+  let color = e.target.value;
+  document.documentElement.style.setProperty("--grid-color", color);
+}
+
+document
+  .getElementById("color-picker")
+  .addEventListener("input", (e) => changeFillColor(e));
 document
   .getElementById("size-input")
   .addEventListener("blur", (e) => changeGridSize(e));
